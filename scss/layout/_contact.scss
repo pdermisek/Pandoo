@@ -1,0 +1,63 @@
+.contact__section {
+    background-color: $white;
+    padding: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.contact__section h2 {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56.35px;
+}
+
+.contact__section p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.18px;
+    max-width: 840px;
+    max-height: 61.63px;
+}
+
+.contact__form {
+    position: relative;
+    min-width: 696px;
+    min-height: 64px;
+    top: 70px;
+}
+
+.contact__form input {
+    font-style: italic;
+    min-width: 696px;
+    min-height: 64px;
+    padding-right: 110px;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact__form button {
+    background-color: $primary-color;
+    min-width: 120px;
+    min-height: 48px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    height: 60%;
+    padding: 0 18px;
+    border: none;
+    border-radius: 12px;
+    color: $grey;
+    font-weight: 700;
+    font-size: 24px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

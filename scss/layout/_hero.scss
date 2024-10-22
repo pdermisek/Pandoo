@@ -1,0 +1,59 @@
+.hero__section {
+    background-image: url('..//media/hero_windmills.png');
+    max-width: 1920px;
+    max-height: 640px;
+    top: 101px;
+    gap: 0px;
+    opacity: 0px;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 196px;
+}
+
+.hero__title .hero__container {
+    min-width: 627px;
+    min-height: 228px;
+    top: 307px;
+    left: 196px;
+    gap: 0px;
+    opacity: 0px;
+    display: flex;
+    background-color: $primary-color;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.hero__title {
+    max-width: 50%;
+
+}
+
+.hero__title .hero__text {
+    width: 595px;
+    height: 228px;
+    opacity: 1;
+    background-color: $grey;
+    color: #fefefe;
+    top: 307px;
+    left: 228px;
+    text-align:  start;
+   
+}
+
+.hero__h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-left: 12px;
+    margin-top: 12px;
+    margin-bottom: 25px;
+}
+
+p.hero__paragraph {
+    margin-left: 12px;
+    font-weight: 400;
+    font-size: 18px;
+}

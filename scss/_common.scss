@@ -1,0 +1,12 @@
+@import url(mixins.scss);
+
+.common-button {
+    @include button($white, $grey);
+    font-weight: 400;
+    display: inline-block;
+}
+
+.common-text {
+    font-size: 18px;
+    margin-left: 12px;
+}
