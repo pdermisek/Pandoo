@@ -1,127 +1,123 @@
-.main__section {
+.about-section {
     background-color: $grey;
     color: #fefefe;
-    padding: 64px;
-    max-width: 1920px;
-    max-height: 1589px;
+    margin: 0 auto;
+    padding-bottom: 6rem;
 }
 
-.main__subsection {
+.about-section__item {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .second__subsection {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 200px;
+    margin-bottom: 3.5rem;
 }
 
-.main__section h2 {
-    font-size: 48px;
+.about-section h2 {
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 80px;
-    line-height: 56.35px;
-    min-width: 840px;
-    min-height: 56px;
+    line-height: 3.5rem;
     text-align: center;
+    padding: 4rem 0px 7.313rem 0px;
 }
 
-.main__section .main__text {
+.about-section .item__text {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 50%;
-    padding: 10px;
+    padding: 0.625rem;
 }
 
-.main__section .main__subtext {
-    margin-right: 100px;
-    padding-bottom: 120px;
+.about-section .item-text__layout {
+    margin-right: 6.25rem;
+    padding-bottom: 7.5rem;
 }
 
-.main__subtext {
-    min-width: 696px;
-    min-height: 435px;
-    padding-left: 252px;
-    padding-right: 168px;
+.item-text__layout {
+    min-width: 43.5rem;
+    min-height: 27.188rem;
+    padding-left: 15.75rem;
+    padding-right: 10.5rem;
     text-align: left;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
 }
 
-.main__subtext h3 {
-    font-size: 36px;
+.item-text__layout h3 {
+    font-size: 2.25rem;
     font-weight: 600;
-    line-height: 42.26px;
+    line-height: 2.641rem;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
-.main__subtext p {
+.item-text__layout p {
     text-align: left;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
-    line-height: 21.13px;
+    line-height: 1.321rem;
 }
 
 .second__text {
     display: flex;
     align-items: center;
     flex-direction: column;
-    max-width: 696px;
-    max-height: 435px;
-    padding: 50px;
-    margin-right: 108px;
+    max-width: 43.5rem;
+    min-height: 27.188rem;
+    padding: 3.125rem;
+    margin-right: 6.75rem;
 }
 
 .second__subtext {
-    min-width: 696px;
-    min-height: 435px;
-    margin-left: 100px;
-    padding-bottom: 60px;
+    min-width: 43.5rem;
+    min-height: 27.188rem;
+    margin-left: 15.25rem;
 }
 
  .second__text h3 {
     text-align: left;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 600;
-    line-height: 42.26px;
-    margin-bottom: 20px;
+    line-height: 2.641rem;
+    margin-bottom: 1.25rem;
 }
 
  .second__text p {
     text-align: left;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
-    line-height: 21.13px;
+    line-height: 1.321rem;
 
 }
 
  .main__slika1 {
     background-color: $primary-color;
-    min-width: 696px;
-    min-height: 480px;
+    min-width: 43.5rem;
+    min-height: 30rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px; 
-    margin-right: 108px;  
+    margin-bottom: 2.5rem; 
+    margin-right: 6.75rem;  
 }
 
 .main__slika2 {
     background-color: $primary-color;
-    min-width: 696px;
-    min-height: 480px;
+    min-width: 43.5rem;
+    min-height: 30rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;   
-    margin-top: 30px;
-    margin-left: 108px;
+    margin-bottom: 2.5rem;   
+    margin-top: 1.875rem;
+    margin-left: 6.75rem;
 }
 
 .image__windmill {
@@ -129,8 +125,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin-right: auto;  
-    min-width: 664px;
-    min-height: 480px;
+    min-width: 41.5rem;
+    min-height: 30rem;
     padding-right: 0;
 }
  .image__solar {
@@ -138,29 +134,99 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: auto;    
-    min-width: 664px;
-    min-height: 480px;
+    min-width: 41.5rem;
+    min-height: 30rem;
     padding: 0;
 }
 
 .learn__more {
-    background-color: #87DE87;
-    color: #333333;
-    padding: 10px 20px;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    width: 264px;
-    height: 72px;
-    top: 2892px;
-    left: 828px;
-    gap: 0px;
-    opacity: 0px;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21.13px;
-    margin: 0 auto;
-    display: block;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    button {
+        align-items: center;
+        background-color: $primary-color;
+        color: $grey;
+        font-size: 1.1rem;
+        line-height: 1.321rem;
+        width: 16.5rem;
+        height: 4.5rem;
+        text-align: center;
+        border-radius: 0.75rem;
+        border: none;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about-section {
+        padding-bottom: 3rem;
+    }
+
+    .about-section h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        padding: 2rem 0px 4rem 0px;
+    }
+
+    .about-section__item,
+    .second__subsection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .item__text, .second__text {
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .item-text__layout,
+    .second__subtext {
+        min-width: auto;
+        padding: 0 1.5rem;
+        text-align: center;
+        font-size: 1rem;
+        text-wrap: wrap;
+    }
+
+    .item-text__layout h3, .second__text h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .item-text__layout p, .second__text p {
+        font-size: 1rem;
+        line-height: 1.4rem;
+        text-align: center;
+    }
+
+    .main__slika1,
+    .main__slika2 {
+        min-width: 100%;
+        min-height: 200px;
+        margin: 1rem 0;
+    }
+
+    .image__windmill,
+    .image__solar {
+        min-width: 100%;
+        min-height: 200px;
+        background-size: cover;
+    }
+
+    .learn__more {
+      visibility: hidden;
+      clear: both;
+      display: none;
+
+        button {
+            visibility: hidden;
+            clear: both;
+            display: none;
+        }
+    }
 }

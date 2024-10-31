@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-@mixin button($bg-color, $text-color, $padding: 10px 20px) {
+@mixin button($bg-color, $text-color, $padding: 0.625rem 1.25rem) {
     background-color: $bg-color;
     color: $text-color;
     padding: $padding;
@@ -16,3 +16,5 @@
     cursor: pointer;
     border-radius: $border-radius;
 }
+
+

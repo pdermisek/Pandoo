@@ -1,0 +1,34 @@
+.glide__arrow{
+    position:absolute;
+    display:block;
+    top:50%;
+    z-index:2;
+    text-transform:uppercase;
+    padding:9px 12px;
+    background-color: #87de87;
+    border-radius:50%;
+    cursor:pointer;
+    line-height:1
+}
+    
+.glide__arrow:focus{
+    outline:none
+}
+
+.glide__arrow:hover{
+    border-color:#87de87;
+}
+
+.glide__arrow--left{
+    left:2em
+}
+.glide__arrow--right{
+    right:2em
+}
+
+@media (max-width: 768px) {
+    .glide__arrow {
+        background-color: white;
+    }
+}
+/*# sourceMappingURL=glide.theme.min.css.map */

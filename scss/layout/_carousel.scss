@@ -1,0 +1,25 @@
+.conteiner_slike{
+    max-width: 120rem;
+    max-height: 37.5rem;
+    background-color: $white;
+    padding: 7.5rem 0px 7.5rem 0px;
+}
+
+.container_slike h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.522rem;
+    padding: 6.5rem 0px 6.5rem 0px;
+}
+.glide__slide img {
+    height: 20.063rem;
+    width: 34.5rem;
+
+} 
+
+@media (max-width: 768px) {
+    .container_slike {
+        max-width: 48rem;
+    }
+}

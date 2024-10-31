@@ -6,27 +6,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <link rel="stylesheet" href="./scss/main.css">
+    <link rel="stylesheet" href="./scss/glide.core.min.css">
+    <link rel="stylesheet" href="./scss/glide.theme.css">
+    <link rel="stylesheet" href="./scss/glide.core.css">    
     <title>PanDoo</title>
 </head>
 <body>
 
     <header class="header">
         <img src="media/pandoo_logo.png" alt="Pandoo_logo" class="header__logo"> 
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <ul class="nav-links">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Testimonials</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="cnct">Contact</a></li>
                 <li><a href="#" class="nav__button">GET IT NOW</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
+        <script>
+            
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+        
+           
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active"); 
+            });
+        </script>
     </header>
-
+    
     <!--Hero section-->
-    <section class="hero__section">
+    <section class="hero">
         <div class="hero__title">
             <div class="hero__container"> 
                 <div class="hero__text">
@@ -94,14 +113,14 @@
     </section>
 
     <!--Section with descriptions-->
-    <section class="main__section">
+    <section class="about-section">
         <h2>Section Title</h2>
 
-        <div class="main__subsection">
+        <div class="about-section__item">
 
-            <div class="main__text">
+            <div class="item__text">
 
-                <div class="main__subtext">
+                <div class="item-text__layout">
 
                 <h3>Subsection Title</h3>
                 <p>You don't frighten us, English pig dogs. Go and boil your bottoms, 
@@ -174,8 +193,50 @@
             </div>
         </div>
         </div>
+        <div class="learn__more">
         <button class="learn__more" aria-label="Learn more">LEARN MORE</button>
+    </div>
     </section>
+
+    <!--Carousel section-->
+    <div class="container_slike">
+        <h2>Section title</h2>
+        <div class="glide">
+            
+            <div class="glide__track" data-glide-el="track">
+                
+              <ul class="glide__slides">
+                <li class="glide__slide"><img src="media/carousel/slide1.jfif" alt="slide1"></li>
+                <li class="glide__slide"><img src="media/carousel/slide2.jfif" alt="slide2"></li>
+                <li class="glide__slide"><img src="media/carousel/slide3.jfif" alt="slide3"></li>
+                <li class="glide__slide"><img src="media/carousel/slide4.jfif" alt="slide4"></li>
+                <li class="glide__slide"><img src="media/carousel/slide5.jfif" alt="slide5"></li>
+              </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="media/arrow left.png" alt="leftarrow"></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="media/arrow right.png" alt="rightarrow"></button>
+              </div>
+          </div>
+    </div>
+   
+    <script>
+        new Glide('.glide', {
+        type: 'carousel',
+        startAt: 0,
+        gap:24,
+        perView: 3,
+        autoplay: 3000,
+        peek:{
+            before:100,
+            after:100
+        },
+        
+        hoverpause: true,
+        animationDuration: 800
+    }).mount();
+      </script>
+
 
     <!--Last section-->
     <section class="contact__section">

@@ -3,43 +3,109 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: $primary-color;
-    padding: 20px;
-    max-width: 1920px;
-    max-height: 101px;
-    font-size: 18px;
+    padding: 1.25rem;
+    max-width: 120rem;
+    height: 3.8125rem;
+    font-size: 1.125rem;
     font-weight: 600;
 }
 
 .header__logo {
-    padding: 108px;
-    max-width: 120px;
-    max-height: 52px;
-    top: 24px;
-    left: 108px;
-    gap: 0px;
-    opacity: 0px;
+    padding: 1.5rem 0 2.172rem 6.75rem;
+    width: 7.5rem;
+    height: 3.25rem;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
-    padding: 60px;
+    gap: 1.875rem;
+    padding: 3.75rem;
 }
 
 nav ul li a {
     text-decoration: none;
     color: $grey;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .nav__button {
     background-color: $white;
-    max-width: 128px;
-    max-height: 40px;
-    padding: 10px;
+    max-width: 8rem;
+    max-height: 2.5rem;
+    padding: 0.625rem;
     color: $grey;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.125rem;
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 0.188rem;
+    width: 1.563rem;
+    background-color: #333;
+    color: #333;
+    margin: 0.25rem;
+    
+}
+
+
+@media (max-width: 768px) {
+
+    header {
+        max-width: 48rem;
+    }
+
+    .header__logo {
+        min-width: 9.275rem;
+        min-height: 4rem;
+        padding-left: 2rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 3.75rem;
+        left: 0;
+        width: 100%;
+        background-color: $white;
+        flex-direction: column;
+        text-align: left;
+        padding: 1.875rem;
+        font-size: 1.5rem;
+    }
+
+    .nav-links li {
+        margin: 0.625rem 0;
+        font-size: 1.5rem;
+    }
+
+    .nav__button {
+        background-color: $primary-color;
+
+    }
+
+    .hamburger {
+        font-size: 1.5rem;
+        display: flex;
+    }
+    
+
+    .nav-links.active {
+        font-size: 1.5rem;
+        display: flex;
+    }
+
 }
