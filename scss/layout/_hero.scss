@@ -1,63 +1,108 @@
-.hero {
+.hero__desktop {
     background-image: url('..//media/hero_windmills.png');
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
     max-width: 120rem;
-    min-height: 40rem;
+    height: 40rem;
+    box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
+
+    @include mobile-device {
+        display: none;
+      }   
 }
 
-.hero__title {
-    max-width: 39.188rem;
-    min-height: 14.25rem;
-    background-color: $primary-color;
+.hero {
+    position: absolute;
     margin-left: 12.25rem;
-}
+    margin-top: 12.875rem;
+    display: grid;
+    grid-template-columns: 2rem 37.188rem;
+    width: 39.188rem;
+    max-width: 39.188rem;
+    height: 14.25rem;
+  
+    &__container {
+      background-color: $primary-color;
+      width: 2rem;
+    }
+  
+    &__text {
+      background-color: $grey;
+      width: 37.188rem;
+      max-width: 37.188rem;
+      color: $white;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.313rem;
+  
+      h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 3.5rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+  
+      p {
+        margin-left: 2rem;
+        margin-right: 1.188rem;
+      }
+    }
+  }
+  
 
-.hero__container {
-    background-color: $grey;
-    color: $white;
-    max-width: 37.188rem;
-    min-height: 14.25rem;
-    padding-left: 1.5rem;
-    padding-right: 1.188rem;
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 1.313rem;
-    margin-left: 2rem;
 
-}
-
-
-.hero__h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 3.5rem;
-    padding-top: 2rem;
+.mobile-hero {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    margin: 0 auto;
     padding-bottom: 1.5rem;
-}
+    background: $primary-color;
 
+    @include desktop-device {
+        display: none;
+      }
+  
 
-@media (max-width: 768px) {
-    .hero {
+    &__container {
+        padding-bottom: 1.0769rem;
+        background: $primary-color;
         min-width: 23.438rem;
-        min-height: 28.938rem;
-        display: block;
+        min-height: 14.75rem;
     }
 
-    .hero__title {
-        max-width: 23.438rem;
-        min-height: 17.827rem;
-        background-color: $primary-color;
-        display: block;
+      &__img {
+        margin-bottom: -0.313rem;
+        img{
+        max-height: 28.938rem;
+        width: 96.5vw;
+        }
+      }
+.container__text {
+    background: $text-color;
+    color: $white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 2rem 2rem 0 2rem;
+  
+  
+    h1 {
+      font-weight: 600;
+      font-size: 2.25rem;
+      line-height: 2.625rem;
+      padding-bottom: 0.8rem;
     }
-
-    .hero__container {
-        font-size: 1rem;
+  
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding-bottom: 2rem;
     }
-
-    .hero__h1 {
-        font-size: 2.25rem;
-    }
+  }
 }

@@ -1,148 +1,96 @@
-.footer__section {
+.footer {
     background-color: $primary-color;
-    color: $grey;
-    max-width: 120rem;
-    max-height: 29.5rem;
-    position: relative;
-}
-
-.logo__footer {
-    
-    top: 3rem;
-    padding: 6.75rem;
-    max-width: 13.938rem;
-    max-height: 6.011rem;
-    padding-bottom: 1.489rem;
-    padding-top: 3rem;
-
-}
-
-.logo__footer img {
-    width: 13.938rem;
-    height: 6.011rem;
-}
-
-.info__section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
     margin: 0 auto;
-    padding: 0rem;
-}
-
-.info__name {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    margin-left: 6.75rem;
-    margin-bottom: 6rem;
-    margin-right: 0rem;
-}
-
-.info__name h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem;
-    font-weight: 600;
-    line-height: 1.761rem;
-}
-
-.info__name p {
     font-weight: 400;
     font-size: 1.125rem;
-    line-height: 1.321rem;
-}
-
-.adresa {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    text-decoration: none;
-    font-style: normal;
-    gap: 0.625rem;
-}
-.kontakt{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    text-decoration: none;
-    font-style: normal;
-    gap: 0.625rem;
-}
-
-.info__section .info__name address {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    text-decoration: none;
-    font-style: normal;
-    gap: 0.625rem;
-}
-
-.links__section {
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-direction: row;
-    padding-left: 3.125rem;
-}
-
-.links__section .company__section .products__section {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.company__section {
-    padding-right: 12.5rem;
-}
-
-.links__section p {
-    font-weight: 600;
-    font-size: 1.125rem;
-    line-height: 1.321rem;
-    margin-bottom: 0.625rem;
-}
-
-.links__section .products__links,
-.links__section .company__links {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-left: 0;
-    gap: 0.625rem;
-  }
-
-  .links__section .products__heading {
-    font-weight: 600;
-    font-size: 1.125rem;
-  }
-
-.links__section .products__links a {
-    text-decoration: none;
+    line-height: 1.313rem;
+    padding-bottom: 3rem;
     color: $grey;
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 1.321rem;
-}
-
-.links__section .company__heading {
-    font-weight: 600;
-    font-size: 1.125rem;
-}
-
-.links__section .company__links a {
-    text-decoration: none;
-    color: $grey;
-    font-weight: 400;
-    font-size: 1.125rem;
+  
+    @include desktop-device {
+      max-width: 120rem;
+      max-height: 26.5rem;
+    }
+  
+    @include mobile-device {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+  
+    &__logo {
+      padding-top: 3rem;
+      margin-left: 6.75rem;
+  
+      @include mobile-device {
+        display: flex;
+        justify-content: center;
+        margin-left: 0rem;
+        padding-top: 0rem;
+  
+      }
+  
+      img {
+        width: 13.938rem;
+        height: 6.011rem;
+      }
+    }
+  
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+      @include mobile-device {
+        display: flex;
+        flex-flow: column nowrap;
+      }
+  
+      .footer__container-info {
+        display: flex;
+        flex-flow: column wrap;
+        padding-left: 6.75rem;
+  
+        @include mobile-device {
+          @include footer-info;
+        }
+        
+        h2 {
+          font-weight: 600;
+          font-size: 1.5rem;
+          line-height: 1.761rem;
+          margin-bottom: 0;
+        }
+      }
+  
+      .footer__container-products {
+        display: flex; 
+        flex-flow: column wrap;
+  
+        @include mobile-device {
+          @include footer-info;
+        }
+  
+        a {
+          margin-bottom: 0.625rem;
+        }
+      }
+  
+      .footer__container-company {
+        display: flex;
+        flex-flow: column wrap;
+  
+        @include mobile-device {
+          @include footer-info;
+        }
+  
+        a {
+          margin-bottom: 0.625rem;
+        }
+  
+        h3 {
+          font-weight: 600;
+        }
+      } 
+    }
 }
 
 .follow__section {
@@ -151,11 +99,20 @@
     justify-content: center;
     flex-direction: column;
     padding-right: 15.75rem;
+
+    @include mobile-device {
+        display: block;
+        padding: 1rem;
+    }
 }
-.follow__section p {
+.follow__section h3 {
     font-weight: 600;
     font-size: 1.125rem;
     line-height: 1.321rem;
+
+    @include mobile-device {
+        text-align: center;
+    }
 }
 
 .media__section {
@@ -163,11 +120,22 @@
     flex-direction: row;
     margin-top: 0.625rem;
     justify-content: space-around;
+
+    @include mobile-device {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.625rem;
+        justify-content: center;
+
+        gap: 1.5rem;
+    }
 }
 
 .media__section a {
     margin-right: 1.875rem;
-    
+    @include mobile-device{
+        margin-right:0px;
+    }
 }
 .media__section a:hover {
     background-color: green;
@@ -199,6 +167,11 @@
     font-weight: 400;
     line-height: 1.321rem;
     padding-inline: 2.25rem;
+    @include mobile-device{
+        padding-inline: 0.5rem;
+        
+    }
+
 }
 
 .bottom__footer p {
@@ -219,7 +192,7 @@
 
 .social-icon.facebook {
     background-image: url('..//../media/facebook1.png');
-    background-size: 70%;
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -245,92 +218,51 @@
     background-position: center;
   }
 
-  @media (max-width: 768px) {
-    .footer__section {
-        min-width: 23.438rem;
-        min-height: 52.188rem;
+  .bottom__footer {
+    background-color: $grey;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: $white;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.313rem;
+  
+    @include desktop-device {
+      max-width: 120rem;
+      height: 3rem;
     }
-
-    .info__section {
-        display: block;
+  
+    @include mobile-device {
+      display: flex;
+      flex-flow: column-reverse nowrap;
     }
-
-    .info__name {
-        display: block;
+  
+    .bottom__footer__left {
+      padding-top: 0.813rem;
+      margin-left: 6.75rem;
+  
+      @include mobile-device {
+        display: flex;
+        margin-left: 0rem;
+        padding-top: 0rem;
+        justify-content: center;
+      }
     }
-    
-    .follow__section {
-        display: block;
-        padding: 1rem;
+  
+    .bottom__footer__right {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      column-gap: 2.25rem;
+      margin-right: 6.75rem;
+      padding-top: 0.813rem;
+  
+      @include mobile-device {
+        margin-right: 0rem;
+        padding-top: 0rem;
+        column-gap: 0rem;
+        padding-right: 1rem;
+      }
     }
-
-    .follow__section p {
-        text-align: center;
-    }
-
-    .company__section {
-        display: block;
-        text-align: center;
-    }
-
-    .company__heading {
-        margin-left: 8rem;
-    }
-
-    .company__links {
-        text-align: center;
-        display: block;
-        padding: 0.5rem;
-        margin-left: 8rem;
-    }
-
-    .links__section {
-        display: block;
-        text-align: center;
-        padding: 0.3rem;
-    }
-
-    .products__section {
-        display: block;
-        text-align: center;
-    }
-
-    .products__heading {
-        margin-left: 5.5rem;
-    }
-
-    .products__links {
-        text-align: center;
-        display: block;
-        padding: 0.5rem;
-        margin-left: 8rem;
-    }
-
-    .products__links a {
-        text-align: center;
-    }
-
-    .kontakt {
-        display: block;
-    }
-
-    .adresa {
-        display: block;
-    }
-
-    .bottom__footer {
-        min-width: 23.438rem;
-        min-height: 5.375rem;
-    }
-
-    .right__footer {
-        display: block;
-        text-align: center;
-    }
-
-    .left__footer {
-        display: block;
-        text-align: center;
-    }
-
   }

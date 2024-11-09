@@ -1,6 +1,6 @@
 .contact__section {
     background-color: $white;
-    padding: 7.5rem 0px 7.5rem 0px;
+    padding: 7.5rem 0rem 7.5rem 0rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -65,6 +65,7 @@
 @media (max-width: 768px) {
     .contact__section {
         max-width: 48rem;
+        padding-top: 2rem;
     }
 
     .contact__section h2 {

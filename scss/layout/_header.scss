@@ -41,6 +41,7 @@ nav ul li a {
 }
 
 
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -56,6 +57,10 @@ nav ul li a {
     margin: 0.25rem;
     
 }
+.nav__button-close{
+    display: none;
+}
+
 
 
 @media (max-width: 768px) {
@@ -63,6 +68,7 @@ nav ul li a {
     header {
         max-width: 48rem;
     }
+    
 
     .header__logo {
         min-width: 9.275rem;
@@ -77,14 +83,31 @@ nav ul li a {
     .nav-links {
         display: none;
         position: absolute;
-        top: 3.75rem;
+        top:0;
         left: 0;
-        width: 100%;
+        width: 87.5%;
+        height: 100%;
+        padding: 1.875rem;
         background-color: $white;
         flex-direction: column;
         text-align: left;
-        padding: 1.875rem;
+        
         font-size: 1.5rem;
+        .nav__button {
+            position: absolute;
+            background-color: $primary-color;
+            bottom: 10rem;
+            
+    
+        }
+    .nav__button-close{
+        display: block;
+        align-self: end;
+    background: none;
+    border: none;
+    padding: 1.1rem 2rem 0 0;
+    cursor: pointer;
+    }
     }
 
     .nav-links li {
@@ -92,10 +115,7 @@ nav ul li a {
         font-size: 1.5rem;
     }
 
-    .nav__button {
-        background-color: $primary-color;
-
-    }
+    
 
     .hamburger {
         font-size: 1.5rem;
